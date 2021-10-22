@@ -2,7 +2,7 @@ const canvas = document.getElementById("jsCanvas");
 const ctx = canvas.getContext("2d");
 const colors = document.getElementsByClassName("jsColor");
 const range = document.getElementById("jsRange");
-const mode = document.getElementById("jsMode");
+const Pmode = document.getElementById("jsMode");
 const saveBtn = document.getElementById("jsSave");
 
 const INITIAL_COLOR = "#2c2c2c";
@@ -54,10 +54,10 @@ function handleRangeChange(event) {
 function handleModeClick(event) {
   if (filling === true) {
     filling = false;
-    mode.innerText = "FILL";
+    Pmode.innerText = "FILL";
   } else {
     filling = true;
-    mode.innerText = "PAINT";
+    Pmode.innerText = "PAINT";
   }
 }
 
@@ -96,8 +96,8 @@ if (range) {
   range.addEventListener("input", handleRangeChange);
 }
 
-if (mode) {
-  mode.addEventListener("click", handleModeClick);
+if (Pmode) {
+  Pmode.addEventListener("click", handleModeClick);
 }
 
 if (saveBtn) {
